@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+
+    <h1>Login page</h1>
+
+    <form>
+    <input id="user_id" type="text" placeholder="User Id">
+    <input id="pass" type="password" placeholder="Password">
+    </form>
+
+    <button style="position: relative;" onclick="log() ">Login</button>
+    <a href ="/try.html" target="_blank"></a>
+
+  <script>
+
+    function log(){
+      var user = document.getElementById("user_id").value;
+      var pass = document.getElementById("pass").value;
+
+      if(user=="Ankit" && pass=="A"){
+        console.log("good");
+
+        window.location.href = "/Users/ankit/Documents/Intern/tictactoe.html";
+
+        // `<a href = "/tictactoe.html"></a>`
+
+        // // Create anchor element.
+        // var a = document.createElement('a'); 
+                
+        //         // Create the text node for anchor element.
+        //         var link = document.createTextNode("Login Successful");
+                
+        //         // Append the text node to anchor element.
+        //         a.appendChild(link); 
+  
+        //         // Set the href property.
+        //         a.href = "tictactoe.html"; 
+                
+        //         // Append the anchor element to the body.
+        //         document.body.appendChild(a);
+
+
+      }
+
+      else alert("Wrong Id or pass");
+    }
+
+  </script>
+
+
+  </body>
+
+
+</html>
+
