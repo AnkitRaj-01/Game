@@ -43,10 +43,12 @@ function cellClicked(){
     checkWinner();
 }
 
-function updateCell(cell, index){
+function updateCell(cell, index) {
     options[index] = current_player;
     cell.textContent = current_player;
+    cell.classList.add(current_player); 
 }
+
 
 function changePlayer(){
     current_player = (current_player == "X") ? "O" : "X";
@@ -86,12 +88,16 @@ function checkWinner(){
 
 }
 
-function restartGame(){
+function restartGame() {
     current_player = "X";
     options = ["", "", "", "", "", "", "", "", ""];
     statusText.textContent = `${current_player}'s Turn`;
-    cells.forEach(cell => cell.textContent = "");
+    cells.forEach(cell => {
+        cell.textContent = "";
+        cell.classList.remove("X", "O");
+    });
     running = true;
 }
+
 
 initializeGame();
